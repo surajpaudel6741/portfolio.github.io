@@ -1,0 +1,50 @@
+.bio {
+    margin: 50px 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pp {
+    position: relative;
+    height: 400px;
+    width: 400px;
+}
+
+.ppic {
+    position: absolute;
+    height: 500px;
+    width: 400px;
+}
+
+.ppmask {
+    position: absolute;
+    top: 1.4%;
+    left: 3.5%;
+    height: 495px;
+    width: 370px;
+}
+
+.back-pp {
+    perspective: 180px;
+    transform-style: preserve-3d;
+    transform: rotateY(90deg);
+    transition: transform 0.5s;
+}
+
+.pptext {
+    display: block;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(154, 149, 149, 1) 0%, rgba(175, 180, 189, 1) 0%, rgba(196, 241, 251, 1) 0%, rgba(255, 255, 255, 0) 0%, rgba(0, 173, 181, 1) 100%);
+    width: 89%;
+    left: 3%;
+    padding: 0.27em;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    bottom: -25%;
+}
+
+.pp:hover .back-pp {
+    transform: rotateY(0deg);
+}

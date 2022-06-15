@@ -1,0 +1,209 @@
+nav {
+    width: 100%;
+    height: auto;
+    color: var(--var-white);
+    overflow-x: hidden;
+}
+
+.navi {
+    top: 0;
+    width: 100%;
+    height: 20%;
+    position: sticky;
+    z-index: 1;
+}
+
+.mid-nav {
+    background-color: var(--var-black);
+    height: 50px;
+    width: 50%;
+    position: relative;
+    margin: 0 auto;
+    border-bottom: 3px solid var(--var-aqua);
+    border-radius: 5px;
+    overflow: visible;
+}
+
+.mid-nav::after {
+    content: '';
+    background-color: var(--var-black);
+    float: left;
+    position: absolute;
+    right: -15PX;
+    top: -1px;
+    height: 53.5px;
+    width: 50px;
+    border-right: 3px solid var(--var-aqua);
+    border-radius: 5px;
+    transform: skewX(-30deg);
+    z-index: -5;
+}
+
+.mid-nav::before {
+    content: '';
+    background-color: var(--var-black);
+    float: left;
+    position: absolute;
+    left: -15px;
+    top: -1px;
+    height: 53.5px;
+    width: 50px;
+    border-left: 3px solid var(--var-aqua);
+    border-radius: 5px;
+    transform: skewX(30deg);
+    z-index: -5;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    display: inline;
+    list-style: none;
+    font-size: 1rem;
+    font-family: monospace;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px 10px;
+    transition: background-color 1s, font-size 1s;
+    -webkit-transition: background-color 1s, font-size 1s;
+    -moz-transition: background-color 1s, font-size 1s;
+    -o-transition: background-color 1s, font-size 1s;
+}
+
+.leftnav {
+    height: 25px;
+    width: 25%;
+    background-color: var(--var-black);
+    position: absolute;
+    border-bottom: 3px solid var(--var-aqua);
+    border-end-end-radius: 1px;
+    z-index: 2;
+    left: -13px;
+}
+
+.rightnav {
+    height: 25px;
+    width: 25%;
+    background-color: var(--var-black);
+    position: absolute;
+    border-bottom: 3px solid var(--var-aqua);
+    border-end-end-radius: 1px;
+    z-index: 2;
+    top: 0;
+    right: -13px;
+}
+
+nav .active {
+    border-radius: 5px;
+    background-color: #4c515a;
+}
+
+.nav-elements:hover {
+    border-radius: 5px;
+    background-color: #4c515a;
+}
+
+.small-nav {
+    display: none;
+    height: 12px;
+    width: 25px;
+    line-height: 0.5px;
+}
+
+.nav-line {
+    opacity: 1;
+    display: inline-block;
+    height: 3px;
+    width: 25px;
+    margin-bottom: 3px;
+    background-color: var(--var-white);
+    transition: transform 2s, opacity 1s;
+}
+
+.nav-mobile {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    margin-top: -10px;
+}
+
+.drop-down-triangle {
+    margin: auto;
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid var(--var-black);
+    ;
+}
+
+.drop-down-triangle::after {
+    content: '';
+    margin: auto;
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+    border-bottom: 26px solid var(--var-white);
+    position: relative;
+    left: -25.25px;
+    z-index: -1;
+}
+
+.nav-mobile-box {
+    height: 300px;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--var-black);
+    z-index: -1;
+}
+
+
+/* .nav-mobile::before {
+    content: '';
+    
+} */
+
+.nav-mobile-box span {
+    padding: 20px 20px 0 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        overflow-x: hidden;
+    }
+    nav li {
+        font-size: 10px;
+        margin-top: 12px;
+    }
+}
+
+@media screen and (max-width:505px) {
+    body {
+        overflow-x: hidden;
+    }
+    nav li {
+        display: none;
+    }
+    .small-nav {
+        transition: display 2s;
+        display: inline-block;
+    }
+}
