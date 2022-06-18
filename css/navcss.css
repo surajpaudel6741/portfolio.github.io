@@ -1,8 +1,11 @@
 nav {
+    position: sticky;
+    top: 0px;
     width: 100%;
     height: auto;
     color: var(--var-white);
     overflow-x: hidden;
+    z-index: 1000;
 }
 
 .navi {
@@ -128,8 +131,9 @@ nav li {
 .nav-mobile {
     display: none;
     position: fixed;
-    z-index: 1;
     margin-top: -10px;
+    z-index: 100;
+    float: left;
 }
 
 .drop-down-triangle {
@@ -184,6 +188,10 @@ nav li {
     animation: heightincrease 1s ease-out;
 }
 
+.overflow {
+    overflow: hidden;
+}
+
 @keyframes heightincrease {
     0% {
         height: 0;
@@ -197,7 +205,7 @@ nav li {
 }
 
 @media screen and (max-width: 700px) {
-    body {
+    nav {
         overflow-x: hidden;
     }
     nav li {
@@ -207,7 +215,7 @@ nav li {
 }
 
 @media screen and (max-width:499px) {
-    body {
+    nav {
         overflow-x: hidden;
     }
     nav li {

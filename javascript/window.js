@@ -5,6 +5,8 @@ window.addEventListener('resize', function() {
     const line2 = document.querySelector('.nav-cross2')
     const line3 = document.querySelector('.nav-cross3')
     const nav_elements = document.querySelectorAll('.navigation-dropdown');
+    const toBlur = document.querySelector('body >*:not(nav)');
+    const stopBody = document.querySelector('body');
     if (width > 499) {
         navToHide.style.display = 'none';
         line1.style.transform = 'none';
@@ -14,5 +16,7 @@ window.addEventListener('resize', function() {
             element.style.opacity = '0';
 
         });
+        toBlur.style.filter = 'blur(0px)';
+        stopBody.classList.remove('overflow');
     }
 });

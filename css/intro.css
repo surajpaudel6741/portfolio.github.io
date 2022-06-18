@@ -1,0 +1,23 @@
+.intro {
+    width: fit-content;
+    height: fit-content;
+}
+
+.intro-text {
+    position: relative;
+    font-size: 10vw;
+    margin-left: 20px;
+    letter-spacing: 10px;
+    font-family: 'Black Ops One', cursive;
+    color: white;
+    animation: text-drop 2s ease-in-out;
+}
+
+@keyframes text-drop {
+    0% {
+        left: -1000px;
+    }
+    100% {
+        left: 0;
+    }
+}

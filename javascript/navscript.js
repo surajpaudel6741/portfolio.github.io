@@ -5,6 +5,9 @@
      const line3 = document.querySelector('.nav-cross3')
      const nav_elements = document.querySelectorAll('.navigation-dropdown');
      const mobileNav = document.querySelector('#mobile-nav-content');
+     const toBlur = document.querySelector('body >*:not(nav)');
+     const stopBody = document.querySelector('body');
+
      if (navOpen.style.display !== 'none') {
 
          navOpen.style.display = 'none';
@@ -15,7 +18,8 @@
              element.style.opacity = '0';
 
          });
-
+         toBlur.style.filter = 'blur(0px)';
+         stopBody.classList.remove('overflow');
 
      } else {
 
@@ -31,7 +35,8 @@
              }, time);
              time = time + 250;
          });
-
-
+         toBlur.style.filter = 'blur(5px)';
+         stopBody.classList.add('overflow');
+         $('html').animate({ scrollTop: 0 }, 'fast');
      }
  };
