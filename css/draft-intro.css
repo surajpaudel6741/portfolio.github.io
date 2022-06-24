@@ -1,0 +1,243 @@
+    .profile-intro {
+        box-sizing: border-box;
+        position: relative;
+        margin-top: 0px;
+        padding-top: 40px;
+        width: 100vw;
+        height: 550px;
+        /* top: -100px; */
+        transform-style: preserve-3d;
+        perspective: 700;
+        /* border-bottom: 3px solid var(--var-aqua); */
+        background-color: var(--var-grey);
+        /* background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(49, 34, 34, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(255, 0, 11, 1) 0%, rgba(255, 250, 0, 0) 0%, rgba(43, 46, 52, 1) 72%, rgba(43, 46, 52, 1) 100%); */
+    }
+    
+    #particles-js {
+        position: absolute;
+        height: 100%;
+        width: 100vw;
+        overflow: hidden;
+        z-index: -10;
+        transition: filter 2s ease-in-out;
+        filter: blur(0px);
+    }
+    
+    .moving-balls {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        /* background-color: aqua; */
+        z-index: -10;
+    }
+    
+    .picture-text-holder {
+        position: relative;
+        margin: auto;
+        top: 80px;
+        background: transparent;
+        height: 300px;
+        width: 300px;
+        border-radius: 100%;
+        transition: transform 0.5s;
+    }
+    
+    .text-side {
+        display: grid;
+        align-items: center;
+        position: absolute;
+        background-color: transparent;
+        height: 100%;
+        width: 100%;
+        border-radius: 100%;
+        outline: 5px solid var(--var-aqua);
+        overflow: hidden;
+    }
+    
+    .picture-side {
+        position: absolute;
+        background: url(../img/profile.jpg) fixed no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 100%;
+        overflow: hidden;
+        transform: translateZ(-1px);
+        z-index: -2;
+    }
+    
+    .hemisphere {
+        box-sizing: border-box;
+        width: 100%;
+        height: 50%;
+        background-color: var(--var-white);
+        position: absolute;
+        z-index: -1;
+        overflow: hidden;
+    }
+    
+    .hemi-up {
+        border-radius: 150px 150px 0 0;
+        transform: none;
+        top: 0;
+        border-right: 20px solid rgba(148, 148, 148, 0.37);
+    }
+    
+    .hemi-down {
+        border-radius: 0 0 150px 150px;
+        transform: none;
+        bottom: 0;
+        border-right: 20px solid rgba(148, 148, 148, 0.37);
+        border-bottom: 20px solid rgba(148, 148, 148, 0.37);
+    }
+    
+    .profile-text {
+        display: block;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        left: 12px;
+        color: var(--var-aqua);
+        font-family: 'Emblema One', cursive;
+        font-size: 64px;
+        letter-spacing: 3px;
+        text-shadow: -2px -2px 0 var(--var-black), 1px -1px 0 var(--var-black), -1px 1px 0 var(--var-black), 2px 2px 0 var(--var-black);
+        z-index: -1;
+    }
+    
+    .pText-up {
+        bottom: -32px;
+    }
+    
+    .pText-down {
+        top: -43px;
+    }
+    /* .text-side:after {
+        content: '';
+        width: 280px;
+        height: 280px;
+        position: absolute;
+        border-radius: 50%;
+    } */
+    
+    .camera {
+        position: relative;
+        margin: 30px auto;
+        display: block;
+        top: 80px;
+        height: 40px;
+        width: 60px;
+        background-color: var(--var-aqua);
+        border-radius: 10px;
+        border: 2px solid var(--var-aqua);
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.201);
+    }
+    
+    .camera::before {
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        content: '';
+        height: 62.5%;
+        width: 41.67%;
+        border-radius: 50%;
+        outline: 1px solid var(--var-black);
+        border: 2px solid var(--var-grey);
+        background: var(--shutter-bg, transparent);
+        -webkit-background-size: var(--bg-cover, cover);
+        -moz-background-size: var(--bg-cover, cover);
+        -o-background-size: var(--bg-cover, cover);
+        background-size: var(--bg-cover, cover);
+    }
+    
+    .camera:hover::before {
+        animation: shutterround 2s infinite alternate ease-in-out;
+    }
+    
+    .camera::after {
+        position: absolute;
+        right: 10px;
+        bottom: 42px;
+        display: block;
+        content: '';
+        height: 12.5%;
+        width: 25%;
+        transform: rotate(270);
+        background: var(--var-aqua);
+        animation: var(--animation, none);
+        border-top: 2px dashed var(--var-grey);
+    }
+    
+    .name-text {
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .name-text h1 {
+        font-size: 70px;
+    }
+    
+    @keyframes camera {
+        0% {
+            height: 5px;
+        }
+        50% {
+            height: 0px;
+        }
+        100% {
+            height: 5px;
+        }
+    }
+    
+    @keyframes shutterround {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+    
+    @media screen and (max-width:499px) {
+        .profile-intro {
+            height: 450px;
+        }
+        .picture-text-holder {
+            height: 200px;
+            width: 200px;
+            top: 120px;
+        }
+        .profile-text {
+            font-size: 40px;
+            letter-spacing: 2px;
+            text-shadow: -1px -1px 0 var(--var-black), 1px -1px 0 var(--var-black), -1px 1px 0 var(--var-black), 1px 1px 0 var(--var-black);
+        }
+        .pText-up {
+            bottom: -20px;
+        }
+        .pText-down {
+            top: -26px;
+        }
+        .camera {
+            margin: 20px auto;
+            height: 30px;
+            width: 40px;
+            top: 120px;
+        }
+        .camera::after {
+            position: absolute;
+            right: 5px;
+            bottom: 32px;
+            display: block;
+            content: '';
+            height: 12.5%;
+            width: 25%;
+            transform: rotate(270);
+            background: var(--var-aqua);
+            animation: var(--animation, none);
+            border-top: 2px dashed var(--var-grey);
+        }
+    }

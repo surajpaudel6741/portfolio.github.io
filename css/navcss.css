@@ -76,6 +76,7 @@ nav li {
     -webkit-transition: background-color 1s, font-size 1s;
     -moz-transition: background-color 1s, font-size 1s;
     -o-transition: background-color 1s, font-size 1s;
+    cursor: pointer;
 }
 
 .leftnav {
@@ -182,6 +183,7 @@ nav li {
     font-weight: 900;
     border-bottom: 1px solid var(--var-aqua);
     transition: opacity 1s;
+    cursor: pointer;
 }
 
 .height-animation {
