@@ -14,8 +14,12 @@ function navopen() {
 
 
     if (navOpen.style.display !== 'none') {
+        mobileNav.classList.remove("height-animation-in");
+        mobileNav.classList.add("height-animation-out");
 
-        navOpen.style.display = 'none';
+        setTimeout(() => {
+            navOpen.style.display = 'none';
+        }, 1000);
         line1.style.transform = 'none';
         line2.style.transform = 'none';
         line3.style.opacity = '1';
@@ -29,7 +33,9 @@ function navopen() {
     } else {
 
         navOpen.style.display = 'inline-block';
-        mobileNav.classList.add("height-animation");
+        mobileNav.classList.remove("height-animation-out");
+        mobileNav.classList.add("height-animation-in");
+
         line1.style.transform = 'rotate(60deg)';
         line2.style.transform = 'rotate(-60deg)';
         line3.style.opacity = '0';

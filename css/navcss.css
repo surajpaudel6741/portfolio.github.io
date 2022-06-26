@@ -186,15 +186,19 @@ nav li {
     cursor: pointer;
 }
 
-.height-animation {
-    animation: heightincrease 1s ease-out;
+.height-animation-in {
+    animation: heightincreasein 1s alternate ease-out;
+}
+
+.height-animation-out {
+    animation: heightincreaseout 1s alternate ease-out;
 }
 
 .overflow {
     overflow: hidden;
 }
 
-@keyframes heightincrease {
+@keyframes heightincreasein {
     0% {
         height: 0;
     }
@@ -203,6 +207,18 @@ nav li {
     }
     100% {
         height: 350;
+    }
+}
+
+@keyframes heightincreaseout {
+    0% {
+        height: 350;
+    }
+    50% {
+        height: 200;
+    }
+    100% {
+        height: 0;
     }
 }
 
