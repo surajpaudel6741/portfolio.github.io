@@ -1,0 +1,307 @@
+    @import url('https://fonts.googleapis.com/css2?family=Megrim&family=Scope+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&family=Nixie+One&family=Scope+One&display=swap');
+    .bio {
+        font-size: 30px;
+    }
+    
+    .bio-title {
+        position: relative;
+        margin-top: 30px;
+        letter-spacing: 2px;
+        text-align: center;
+        font-family: 'Megrim', cursive;
+        font-size: 2em;
+        width: max-content;
+        margin: auto;
+        transition: color 1s ease-in-out, font-size 0.5s;
+        overflow: hidden;
+        padding: 0px 20px;
+    }
+    
+    #a-rotation {
+        display: inline-block;
+        color: var(--var-white);
+        font-family: 'Megrim', cursive;
+        transform-style: preserve-3d;
+        transform-origin: center;
+        transition: color 1s ease-in-out, font-size 0.5s;
+    }
+    
+    .bio-title span {
+        color: var(--var-aqua);
+        font-family: 'Scope One', serif;
+        font-weight: bolder;
+    }
+    
+    .bio-title::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: var(--title-line, 0px);
+        height: 100%;
+        left: 50%;
+        bottom: 5px;
+        border-bottom: 3px solid var(--var-aqua);
+        transition: transform 0.2s ease;
+    }
+    
+    .bio-title::before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: var(--title-line, 0px);
+        height: 100%;
+        right: 50%;
+        bottom: 5px;
+        border-bottom: 3px solid var(--var-aqua);
+        transition: transform 0.2s ease;
+    }
+    
+    .bio-title:hover #a-rotation {
+        color: var(--var-aqua);
+        animation: a-rotation 1s 1 alternate-reverse ease-in-out;
+    }
+    
+    .bio-describe {
+        position: relative;
+        height: 800px;
+        width: 100vw;
+        margin-top: 20px;
+        /* background-color: var(--var-aqua); */
+    }
+    
+    .bio-description {
+        position: relative;
+        margin: 50px auto;
+        height: 80%;
+        width: 75%;
+        background-color: #2228316f;
+        box-sizing: border-box;
+        border-radius: 20px;
+        font-family: 'Scope One', serif;
+        font-size: 24px;
+    }
+    
+    .bio-short-description {
+        position: absolute;
+        line-height: 60px;
+        width: 100%;
+        margin: 30px 0px 0px 50px;
+    }
+    
+    .bio-short-description h2 {
+        font-family: 'Nixie One', cursive;
+        letter-spacing: 5px;
+    }
+    
+    .bio-short-description h2 span {
+        color: var(--var-aqua);
+    }
+    
+    .bio-description p {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .bio-description p::before {
+        content: '';
+        display: block;
+        position: absolute;
+        padding: 15px;
+        top: -20px;
+        left: -25px;
+        height: 50%;
+        width: 100%;
+        border-top: 3px solid var(--var-aqua);
+        border-left: 3px solid var(--var-aqua);
+    }
+    
+    .bio-description p::after {
+        content: '';
+        display: block;
+        position: absolute;
+        padding: 15px;
+        bottom: -20px;
+        right: -25px;
+        height: 50%;
+        width: 100%;
+        border-bottom: 3px solid var(--var-aqua);
+        border-right: 3px solid var(--var-aqua);
+    }
+    
+    .bio-description h3 {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 28px;
+    }
+    
+    @keyframes a-rotation {
+        0% {
+            transform: rotate(360deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    
+    @media screen and (max-width: 1050px) {
+        .bio-description {
+            height: 80%;
+            width: 85%;
+        }
+    }
+    
+    @media screen and (max-width: 930px) {
+        .bio {
+            font-size: 25px;
+        }
+        .bio-describe {
+            height: 650px;
+        }
+        .bio-description {
+            font-size: 20px;
+        }
+        .bio-short-description {
+            font-size: 18px;
+            line-height: 50px;
+        }
+    }
+    
+    @media screen and (max-width: 775px) {
+        .bio {
+            font-size: 18px;
+        }
+        .bio-describe {
+            height: 600px;
+        }
+        .bio-description {
+            font-size: 18px;
+        }
+        .bio-short-description {
+            margin: 20px 0px 0px 20px;
+            font-size: 16px;
+            line-height: 50px;
+        }
+    }
+    
+    @media screen and (max-width: 675px) {
+        .bio-description {
+            height: 80%;
+            width: 90%;
+        }
+        .bio-describe {
+            height: 550px;
+        }
+        .bio-description {
+            font-size: 16px;
+        }
+        .bio-short-description {
+            margin: 20px 0px 0px 20px;
+            font-size: 14px;
+            line-height: 40px;
+        }
+        .bio-description p {
+            width: 60%;
+        }
+    }
+    
+    @media screen and (max-width: 499px) {
+        .bio {
+            font-size: 14px;
+        }
+        .bio-describe {
+            height: 500px;
+        }
+        .bio-description {
+            font-size: 14px;
+        }
+        .bio-short-description {
+            margin: 20px 0px 0px 20px;
+            font-size: 12px;
+            line-height: 30px;
+        }
+    }
+    
+    @media screen and (max-width: 399px) {
+        .bio {
+            font-size: 12px;
+        }
+        .bio-title::after {
+            border-bottom: 1px solid var(--var-aqua);
+        }
+        .bio-title::before {
+            border-bottom: 1px solid var(--var-aqua);
+        }
+        .bio-describe {
+            height: 400px;
+        }
+        .bio-description {
+            font-size: 12px;
+        }
+        .bio-short-description {
+            margin: 10px 0px 0px 10px;
+            letter-spacing: 2px;
+            font-size: 10px;
+            line-height: 30px;
+        }
+        .bio-description p::before {
+            padding: 10px;
+            top: -10px;
+            left: -15px;
+        }
+        .bio-description p::after {
+            padding: 10px;
+            bottom: -10px;
+            right: -15px;
+        }
+    }
+    
+    @media screen and (max-width: 350px) {
+        .bio {
+            font-size: 14px;
+        }
+        .bio-describe {
+            height: 500px;
+        }
+        .bio-description {
+            font-size: 14px;
+        }
+        .bio-short-description {
+            margin: 10px 0px 0px 20px;
+            font-size: 8px;
+            line-height: 30px;
+        }
+        .bio {
+            font-size: 10px;
+        }
+    }
+    
+    @media screen and (max-width: 315px) {
+        .bio {
+            font-size: 14px;
+        }
+        .bio-describe {
+            height: 500px;
+        }
+        .bio-description {
+            font-size: 12px;
+        }
+        .bio-short-description {
+            margin: 10px 0px 0px 20px;
+            font-size: 8px;
+            line-height: 20px;
+        }
+        .bio {
+            font-size: 8px;
+        }
+    }
+    
+    @media screen and (max-width: 250px) {
+        .bio-describe {
+            height: 600px;
+        }
+        .bio {
+            font-size: 6px;
+        }
+    }

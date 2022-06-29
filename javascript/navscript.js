@@ -5,7 +5,7 @@ const line3 = document.querySelector('.nav-cross3')
 const nav_elements = document.querySelectorAll('.navigation-dropdown');
 const mobileNav = document.querySelector('#mobile-nav-content');
 const toBlur = document.querySelector('body >*:not(nav)');
-const stopBody = document.querySelector('body');
+
 navOpen.style.display = 'none';
 line1.style.transform = 'none';
 line2.style.transform = 'none';
@@ -28,7 +28,7 @@ function navopen() {
 
         });
         toBlur.style.filter = 'blur(0px)';
-        stopBody.classList.remove('overflow');
+
 
     } else {
 
@@ -47,7 +47,6 @@ function navopen() {
             time = time + 250;
         });
         toBlur.style.filter = 'blur(5px)';
-        stopBody.classList.add('overflow');
-        $('html').animate({ scrollTop: 0 }, 'fast');
+
     }
 };

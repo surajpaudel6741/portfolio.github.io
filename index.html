@@ -8,7 +8,8 @@
 
     <title>Document</title>
     <link rel="stylesheet" href="css/navcss.css">
-    <link rel="stylesheet" href="css/intro.css">
+    <link rel="stylesheet" href="css/section-intro.css">
+    <link rel="stylesheet" href="css/section-bio.css">
     <link href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
@@ -16,6 +17,11 @@
 
 </head>
 <style>
+    html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+    
     * {
         margin: 0;
         padding: 0;
@@ -23,6 +29,7 @@
     }
     
     body {
+        overflow-x: hidden;
         background-color: #393E46;
         transition: filter 10s ease-in-out;
     }
@@ -36,10 +43,6 @@
         --var-white: #ffffff;
         --var-grey: #393E46;
         --var-black: #222831;
-    }
-    
-    a {
-        text-decoration: none;
     }
 </style>
 
@@ -82,7 +85,7 @@
         </div>
     </nav>
 
-    <section class="section sec-1">
+    <section class="section sec-1" style="filter: none;">
 
         <div class="profile-intro">
 
@@ -112,11 +115,24 @@
     </section>
     <section class="section sec-2">
         <div class="bio">
-            <h1 class="bio-title">Hi, I am <span>S</span>uraj <span>P</span>audel.</h1>
+            <h1 class="bio-title">Who is <span>S</span>ur<span id="a-rotation">a</span>j <span>P</span><span id="a-rotation">a</span>udel<span id="a-rotation">?</span></h1>
         </div>
+        <div class="bio-describe">
+            <div class="bio-description">
+                <div class="bio-short-description">
+                    <h2><span>S</span>elf - <span>L</span>earned <span>D</span>eveloper</h2>
 
+                    <h2><span>C</span>omputer <span>E</span>ngineer<span style="color: rgb(176, 176, 176); font-size: 8px;letter-spacing:1px;">(pursuing)</span>
+                    </h2>
+
+                </div>
+                <p>
+                    He is a Proficient front-end web developer focused on responsive and unique design. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore corporis est ab qui possimus reprehenderit. Iure tempora libero nam porro nulla voluptatum consequatur,
+                    dicta laudantium, laborum earum quaerat aliquid! Neque!
+                </p>
+            </div>
+        </div>
     </section>
-
 
 
 
