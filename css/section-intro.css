@@ -5,7 +5,7 @@
     margin-top: 0px;
     padding-top: 30px;
     width: 100vw;
-    height: 550px;
+    height: 650px;
     top: 0px;
     transform-style: preserve-3d;
     perspective: 700;
@@ -29,7 +29,7 @@
     position: relative;
     margin: auto;
     background: transparent;
-    top: 40px;
+    top: 80px;
     height: 300px;
     width: 300px;
     border-radius: 100%;
@@ -111,7 +111,7 @@
     position: relative;
     margin: 30px auto;
     display: block;
-    top: 40px;
+    top: 100px;
     height: 40px;
     width: 60px;
     background-color: var(--var-aqua);
@@ -139,6 +139,8 @@
     -moz-background-size: var(--bg-cover, cover);
     -o-background-size: var(--bg-cover, cover);
     background-size: var(--bg-cover, cover);
+    transform-style: preserve-3d;
+    transform-origin: center;
 }
 
 .camera:hover::before {
@@ -221,6 +223,15 @@
     }
 }
 
+@keyframes camera-shake {
+    0% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
 @media screen and (max-width:600px) {
     .profile-intro {
         height: 450px;
@@ -230,7 +241,7 @@
     .picture-text-holder {
         height: 200px;
         width: 200px;
-        top: 120px;
+        top: 100px;
         transition: all 0.5s;
     }
     .profile-text {

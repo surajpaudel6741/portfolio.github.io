@@ -33,6 +33,14 @@
         font-weight: bolder;
     }
     
+    .bio-title span:nth-child(4) {
+        display: inline-block;
+        transform-style: preserve-3d;
+        transform-origin: bottom right;
+        animation: waving 1s infinite alternate-reverse;
+        animation-delay: 1s;
+    }
+    
     .bio-title::after {
         content: '';
         display: inline-block;
@@ -64,7 +72,7 @@
     
     .bio-describe {
         position: relative;
-        height: 800px;
+        height: 700px;
         width: 100vw;
         margin-top: 20px;
         /* background-color: var(--var-aqua); */
@@ -73,13 +81,65 @@
     .bio-description {
         position: relative;
         margin: 50px auto;
-        height: 80%;
+        height: 90%;
         width: 75%;
-        background-color: #2228316f;
+        background-color: #2425252a;
+        backdrop-filter: blur(14px);
         box-sizing: border-box;
         border-radius: 20px;
         font-family: 'Scope One', serif;
         font-size: 24px;
+        transition: all 0.5s;
+        -webkit-box-shadow: inset 11px 11px 25px 3px rgba(0, 0, 0, 0.51);
+        -moz-box-shadow: inset 11px 11px 25px 3px rgba(0, 0, 0, 0.51);
+        box-shadow: inset 11px 11px 25px 3px rgba(0, 0, 0, 0.51);
+    }
+    
+    .bio-description::after {
+        content: 'About me';
+        font-size: 2em;
+        box-sizing: border-box;
+        padding-top: 25%;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 5px;
+        color: var(--var-grey);
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.721);
+        text-align: center;
+        display: inline-block;
+        position: absolute;
+        background-color: var(--var-grey);
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+        -webkit-box-shadow: inset -7px -10px 35px -7px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: inset -7px -10px 35px -7px rgba(0, 0, 0, 0.75);
+        box-shadow: inset -7px -10px 35px -7px rgba(0, 0, 0, 0.75);
+        transform-origin: top left;
+        transition: transform 1s ease-out;
+    }
+    
+    .bio-description::before {
+        content: '';
+        font-size: 2em;
+        box-sizing: border-box;
+        display: inline-block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+        -webkit-box-shadow: -2px -2px 31px -1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -2px -2px 31px -1px rgba(0, 0, 0, 0.75);
+        box-shadow: -2px -2px 31px -1px rgba(0, 0, 0, 0.75);
+        transform-origin: top left;
+        transition: transform 1s ease-out;
+    }
+    
+    .bio-description:hover::after {
+        transform: translateX(100%);
+    }
+    
+    .bio-description:hover::before {
+        transform: translateX(100%);
     }
     
     .bio-short-description {
@@ -94,8 +154,13 @@
         letter-spacing: 5px;
     }
     
+    .bio-short-description h2:nth-child(2) {
+        text-align: center;
+    }
+    
     .bio-short-description h2 span {
-        color: var(--var-aqua);
+        color: #fff;
+        text-shadow: 0 0 7px var(--var-aqua), 0 0 10px var(--var-aqua), 0 0 21px var(--var-aqua), 0 0 42px var(--var-white);
     }
     
     .bio-description p {
@@ -103,6 +168,13 @@
         top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
+        letter-spacing: 1px;
+        text-align: justify;
+        font-weight: 600;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 1) 24%, rgba(0, 173, 181, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: rgba(0, 0, 0, 0);
     }
     
     .bio-description p::before {
@@ -112,10 +184,11 @@
         padding: 15px;
         top: -20px;
         left: -25px;
-        height: 50%;
-        width: 100%;
-        border-top: 3px solid var(--var-aqua);
-        border-left: 3px solid var(--var-aqua);
+        height: 60%;
+        width: 60%;
+        border-top: 3px solid var(--var-white);
+        border-left: 3px solid var(--var-white);
+        border-top-left-radius: 20px;
     }
     
     .bio-description p::after {
@@ -125,10 +198,11 @@
         padding: 15px;
         bottom: -20px;
         right: -25px;
-        height: 50%;
-        width: 100%;
+        height: 60%;
+        width: 60%;
         border-bottom: 3px solid var(--var-aqua);
         border-right: 3px solid var(--var-aqua);
+        border-bottom-right-radius: 20px;
     }
     
     .bio-description h3 {
@@ -142,6 +216,24 @@
         }
         100% {
             transform: rotate(0deg);
+        }
+    }
+    
+    @keyframes waving {
+        0% {
+            transform: rotate(00deg);
+        }
+        50% {
+            transform: rotate(0deg);
+        }
+        60% {
+            transform: rotate(-10deg);
+        }
+        80% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-10deg);
         }
     }
     
@@ -291,6 +383,9 @@
             margin: 10px 0px 0px 20px;
             font-size: 8px;
             line-height: 20px;
+        }
+        .bio-short-description h2:nth-child(2) {
+            text-align: left;
         }
         .bio {
             font-size: 8px;
