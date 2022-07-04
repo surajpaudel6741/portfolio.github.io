@@ -115,7 +115,8 @@
         -moz-box-shadow: inset -7px -10px 35px -7px rgba(0, 0, 0, 0.75);
         box-shadow: inset -7px -10px 35px -7px rgba(0, 0, 0, 0.75);
         transform-origin: top left;
-        transition: transform 1s ease-out;
+        animation: var(--var-about-box, box-movement 2s infinite alternate);
+        ;
     }
     
     .bio-description::before {
@@ -131,15 +132,12 @@
         -moz-box-shadow: -2px -2px 31px -1px rgba(0, 0, 0, 0.75);
         box-shadow: -2px -2px 31px -1px rgba(0, 0, 0, 0.75);
         transform-origin: top left;
-        transition: transform 1s ease-out;
+        animation: var(--var-about-box, box-movement 2s infinite alternate);
     }
     
-    .bio-description:hover::after {
-        transform: translateX(100%);
-    }
-    
-    .bio-description:hover::before {
-        transform: translateX(100%);
+    .bio-description:hover {
+        --var-about-box: box-transition 1s ease-out forwards;
+        transition: transform 1s ease-in;
     }
     
     .bio-short-description {
@@ -168,13 +166,17 @@
         top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
-        letter-spacing: 1px;
+        /* letter-spacing: 1px; */
         text-align: justify;
         font-weight: 600;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 1) 24%, rgba(0, 173, 181, 1) 100%);
+        /* background: linear-gradient(135deg, rgba(255, 255, 255, 1) 30%, rgba(69, 74, 82, 0) 90%); */
+        background: white;
         background-clip: text;
         -webkit-background-clip: text;
-        color: rgba(0, 0, 0, 0);
+        letter-spacing: 3px;
+        color: #454a52;
+        /* color: transparent; */
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.721);
     }
     
     .bio-description p::before {
@@ -184,10 +186,13 @@
         padding: 15px;
         top: -20px;
         left: -25px;
-        height: 60%;
-        width: 60%;
-        border-top: 3px solid var(--var-white);
-        border-left: 3px solid var(--var-white);
+        height: 50%;
+        width: 50%;
+        border-top: 3px solid #454a52a6;
+        border-left: 3px solid #454a52a6;
+        -webkit-box-shadow: inset 7px 7px 6px 0px rgba(0, 0, 0, 0.255);
+        -moz-box-shadow: inset 7px 7px 6px 0px rgba(0, 0, 0, 0.255);
+        box-shadow: inset 7px 7px 6px 0px rgba(0, 0, 0, 0.255);
         border-top-left-radius: 20px;
     }
     
@@ -198,10 +203,13 @@
         padding: 15px;
         bottom: -20px;
         right: -25px;
-        height: 60%;
-        width: 60%;
-        border-bottom: 3px solid var(--var-aqua);
-        border-right: 3px solid var(--var-aqua);
+        height: 50%;
+        width: 50%;
+        border-bottom: 3px solid #454a52a6;
+        border-right: 3px solid #454a52a6;
+        -webkit-box-shadow: 7px 7px 6px 0px rgba(0, 0, 0, 0.255);
+        -moz-box-shadow: 7px 7px 6px 0px rgba(0, 0, 0, 0.255);
+        box-shadow: 7px 7px 6px 0px rgba(0, 0, 0, 0.255);
         border-bottom-right-radius: 20px;
     }
     
@@ -216,6 +224,39 @@
         }
         100% {
             transform: rotate(0deg);
+        }
+    }
+    
+    @keyframes box-movement {
+        0% {
+            transform: translate(0);
+        }
+        10% {
+            transform: translate(20px);
+        }
+        20% {
+            transform: translate(0px);
+        }
+        30% {
+            transform: translate(10px);
+        }
+        50% {
+            transform: translate(0px);
+        }
+        75% {
+            transform: translate(0px);
+        }
+        100% {
+            transform: translate(0px);
+        }
+    }
+    
+    @keyframes box-transition {
+        0% {
+            transform: translate(0%);
+        }
+        100% {
+            transform: translate(100%);
         }
     }
     
@@ -242,6 +283,9 @@
             height: 80%;
             width: 85%;
         }
+        .bio-description {
+            font-size: 19px;
+        }
     }
     
     @media screen and (max-width: 930px) {
@@ -252,7 +296,7 @@
             height: 650px;
         }
         .bio-description {
-            font-size: 20px;
+            font-size: 19px;
         }
         .bio-short-description {
             font-size: 18px;
@@ -268,7 +312,7 @@
             height: 600px;
         }
         .bio-description {
-            font-size: 18px;
+            font-size: 16px;
         }
         .bio-short-description {
             margin: 20px 0px 0px 20px;
@@ -286,7 +330,7 @@
             height: 550px;
         }
         .bio-description {
-            font-size: 16px;
+            font-size: 15px;
         }
         .bio-short-description {
             margin: 20px 0px 0px 20px;
@@ -302,11 +346,25 @@
         .bio {
             font-size: 14px;
         }
-        .bio-describe {
-            height: 500px;
-        }
         .bio-description {
             font-size: 14px;
+        }
+        .bio-short-description {
+            margin: 20px 0px 0px 20px;
+            font-size: 12px;
+            line-height: 30px;
+        }
+    }
+    
+    @media screen and (max-width: 450px) {
+        .bio {
+            font-size: 14px;
+        }
+        .bio-describe {
+            height: 550px;
+        }
+        .bio-description {
+            font-size: 13px;
         }
         .bio-short-description {
             margin: 20px 0px 0px 20px;
@@ -326,7 +384,7 @@
             border-bottom: 1px solid var(--var-aqua);
         }
         .bio-describe {
-            height: 400px;
+            height: 500px;
         }
         .bio-description {
             font-size: 12px;
@@ -349,7 +407,7 @@
         }
     }
     
-    @media screen and (max-width: 350px) {
+    @media screen and (max-width: 360px) {
         .bio {
             font-size: 14px;
         }
@@ -357,11 +415,11 @@
             height: 500px;
         }
         .bio-description {
-            font-size: 14px;
+            font-size: 11px;
         }
         .bio-short-description {
             margin: 10px 0px 0px 20px;
-            font-size: 8px;
+            font-size: 9px;
             line-height: 30px;
         }
         .bio {
@@ -374,14 +432,14 @@
             font-size: 14px;
         }
         .bio-describe {
-            height: 500px;
+            height: 600px;
         }
         .bio-description {
-            font-size: 12px;
+            font-size: 11px;
         }
         .bio-short-description {
             margin: 10px 0px 0px 20px;
-            font-size: 8px;
+            font-size: 9px;
             line-height: 20px;
         }
         .bio-short-description h2:nth-child(2) {
@@ -394,9 +452,15 @@
     
     @media screen and (max-width: 250px) {
         .bio-describe {
-            height: 600px;
+            height: 800px;
         }
         .bio {
             font-size: 6px;
+        }
+    }
+    
+    @media screen and (max-width: 250px) {
+        .bio-describe {
+            height: 900px;
         }
     }
