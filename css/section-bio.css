@@ -135,7 +135,12 @@
         animation: var(--var-about-box, box-movement 2s infinite alternate);
     }
     
-    .bio-description:hover {
+    .bio-description:hover::before {
+        --var-about-box: box-transition 1s ease-out forwards;
+        transition: transform 1s ease-in;
+    }
+    
+    .bio-description:hover::after {
         --var-about-box: box-transition 1s ease-out forwards;
         transition: transform 1s ease-in;
     }
@@ -148,8 +153,10 @@
     }
     
     .bio-short-description h2 {
-        font-family: 'Nixie One', cursive;
-        letter-spacing: 5px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 3px;
+        color: var(--var-grey);
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.721);
     }
     
     .bio-short-description h2:nth-child(2) {
@@ -157,8 +164,7 @@
     }
     
     .bio-short-description h2 span {
-        color: #fff;
-        text-shadow: 0 0 7px var(--var-aqua), 0 0 10px var(--var-aqua), 0 0 21px var(--var-aqua), 0 0 42px var(--var-white);
+        color: var(--var-aqua);
     }
     
     .bio-description p {
@@ -166,17 +172,14 @@
         top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
-        /* letter-spacing: 1px; */
         text-align: justify;
         font-weight: 600;
-        /* background: linear-gradient(135deg, rgba(255, 255, 255, 1) 30%, rgba(69, 74, 82, 0) 90%); */
         background: white;
         background-clip: text;
         -webkit-background-clip: text;
         letter-spacing: 3px;
         color: #454a52;
-        /* color: transparent; */
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.721);
+        text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.721);
     }
     
     .bio-description p::before {
@@ -351,7 +354,7 @@
         }
         .bio-short-description {
             margin: 20px 0px 0px 20px;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 30px;
         }
     }
@@ -368,8 +371,8 @@
         }
         .bio-short-description {
             margin: 20px 0px 0px 20px;
-            font-size: 12px;
-            line-height: 30px;
+            font-size: 14px;
+            line-height: 40px;
         }
     }
     
@@ -392,8 +395,8 @@
         .bio-short-description {
             margin: 10px 0px 0px 10px;
             letter-spacing: 2px;
-            font-size: 10px;
-            line-height: 30px;
+            font-size: 14px;
+            line-height: 40px;
         }
         .bio-description p::before {
             padding: 10px;
@@ -419,8 +422,8 @@
         }
         .bio-short-description {
             margin: 10px 0px 0px 20px;
-            font-size: 9px;
-            line-height: 30px;
+            /* font-size: 14px; */
+            /* line-height: 30px; */
         }
         .bio {
             font-size: 10px;
@@ -432,30 +435,21 @@
             font-size: 14px;
         }
         .bio-describe {
-            height: 600px;
+            height: 800px;
         }
         .bio-description {
             font-size: 11px;
         }
         .bio-short-description {
             margin: 10px 0px 0px 20px;
-            font-size: 9px;
-            line-height: 20px;
+            /* font-size: 9px; */
+            /* line-height: 20px; */
         }
         .bio-short-description h2:nth-child(2) {
             text-align: left;
         }
         .bio {
             font-size: 8px;
-        }
-    }
-    
-    @media screen and (max-width: 250px) {
-        .bio-describe {
-            height: 800px;
-        }
-        .bio {
-            font-size: 6px;
         }
     }
     
