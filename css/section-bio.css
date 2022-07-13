@@ -38,7 +38,7 @@
         transform-style: preserve-3d;
         transform-origin: bottom right;
         animation: waving 1s infinite alternate-reverse;
-        animation-delay: 1s;
+        /* animation-delay: 1s; */
     }
     
     .bio-title::after {
@@ -156,7 +156,7 @@
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         letter-spacing: 3px;
         color: var(--var-grey);
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.721);
+        text-shadow: 2px 2px 2px rgba(57, 57, 57, 0.296), 1px 1px 5px rgba(0, 0, 0, 0.721);
     }
     
     .bio-short-description h2:nth-child(2) {
@@ -174,12 +174,13 @@
         transform: translate(-50%, -50%);
         text-align: justify;
         font-weight: 600;
-        background: white;
+        background: black;
         background-clip: text;
         -webkit-background-clip: text;
         letter-spacing: 3px;
-        color: #454a52;
-        text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.721);
+        color: #707377;
+        /* color: var(--var-aqua); */
+        text-shadow: 3px 3px 2px rgb(44, 43, 43), 3px 2px 3px rgba(0, 0, 0, 0.721);
     }
     
     .bio-description p::before {
@@ -191,8 +192,8 @@
         left: -25px;
         height: 50%;
         width: 50%;
-        border-top: 3px solid #454a52a6;
-        border-left: 3px solid #454a52a6;
+        border-top: 3px solid #707377;
+        border-left: 3px solid #707377;
         -webkit-box-shadow: inset 7px 7px 6px 0px rgba(0, 0, 0, 0.255);
         -moz-box-shadow: inset 7px 7px 6px 0px rgba(0, 0, 0, 0.255);
         box-shadow: inset 7px 7px 6px 0px rgba(0, 0, 0, 0.255);
@@ -208,8 +209,8 @@
         right: -25px;
         height: 50%;
         width: 50%;
-        border-bottom: 3px solid #454a52a6;
-        border-right: 3px solid #454a52a6;
+        border-bottom: 3px solid #707377;
+        border-right: 3px solid #707377;
         -webkit-box-shadow: 7px 7px 6px 0px rgba(0, 0, 0, 0.255);
         -moz-box-shadow: 7px 7px 6px 0px rgba(0, 0, 0, 0.255);
         box-shadow: 7px 7px 6px 0px rgba(0, 0, 0, 0.255);
@@ -292,9 +293,6 @@
     }
     
     @media screen and (max-width: 930px) {
-        .bio {
-            font-size: 25px;
-        }
         .bio-describe {
             height: 650px;
         }
@@ -308,9 +306,6 @@
     }
     
     @media screen and (max-width: 775px) {
-        .bio {
-            font-size: 18px;
-        }
         .bio-describe {
             height: 600px;
         }
@@ -330,10 +325,10 @@
             width: 90%;
         }
         .bio-describe {
-            height: 550px;
+            height: 600px;
         }
         .bio-description {
-            font-size: 15px;
+            font-size: 16px;
         }
         .bio-short-description {
             margin: 20px 0px 0px 20px;
@@ -347,10 +342,10 @@
     
     @media screen and (max-width: 499px) {
         .bio {
-            font-size: 14px;
+            font-size: 18px;
         }
-        .bio-description {
-            font-size: 14px;
+        .bio-describe {
+            height: 650px;
         }
         .bio-short-description {
             margin: 20px 0px 0px 20px;
@@ -361,40 +356,31 @@
     
     @media screen and (max-width: 450px) {
         .bio {
-            font-size: 14px;
+            font-size: 16px;
         }
         .bio-describe {
-            height: 550px;
-        }
-        .bio-description {
-            font-size: 13px;
+            height: 700px;
         }
         .bio-short-description {
             margin: 20px 0px 0px 20px;
             font-size: 14px;
-            line-height: 40px;
+            line-height: 35px;
         }
     }
     
     @media screen and (max-width: 399px) {
         .bio {
-            font-size: 12px;
-        }
-        .bio-title::after {
-            border-bottom: 1px solid var(--var-aqua);
-        }
-        .bio-title::before {
-            border-bottom: 1px solid var(--var-aqua);
+            font-size: 16px;
         }
         .bio-describe {
-            height: 500px;
+            height: 700px;
         }
         .bio-description {
-            font-size: 12px;
+            font-size: 15px;
         }
         .bio-short-description {
-            margin: 10px 0px 0px 10px;
-            letter-spacing: 2px;
+            /* margin: 10px 0px 0px 10px; */
+            letter-spacing: 1px;
             font-size: 14px;
             line-height: 40px;
         }
@@ -412,33 +398,33 @@
     
     @media screen and (max-width: 360px) {
         .bio {
-            font-size: 14px;
+            font-size: 16px;
         }
         .bio-describe {
-            height: 500px;
+            height: 750px;
         }
         .bio-description {
-            font-size: 11px;
+            font-size: 15px;
+        }
+        .bio-description p {
+            top: 50%;
         }
         .bio-short-description {
             margin: 10px 0px 0px 20px;
             /* font-size: 14px; */
             /* line-height: 30px; */
         }
-        .bio {
-            font-size: 10px;
-        }
     }
     
-    @media screen and (max-width: 315px) {
-        .bio {
-            font-size: 14px;
-        }
+    @media screen and (max-width: 325px) {
         .bio-describe {
-            height: 800px;
+            height: 900px;
         }
         .bio-description {
-            font-size: 11px;
+            font-size: 14px;
+        }
+        .bio-description p {
+            top: 60%;
         }
         .bio-short-description {
             margin: 10px 0px 0px 20px;
@@ -449,12 +435,12 @@
             text-align: left;
         }
         .bio {
-            font-size: 8px;
+            font-size: 12px;
         }
     }
     
-    @media screen and (max-width: 250px) {
+    @media screen and (max-width: 260px) {
         .bio-describe {
-            height: 900px;
+            height: 1000px;
         }
     }

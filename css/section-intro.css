@@ -119,6 +119,8 @@
     border: 2px solid var(--var-aqua);
     box-shadow: 5px 5px rgba(0, 0, 0, 0.201);
     cursor: pointer;
+    animation: camera-move 3s infinite alternate;
+    transform-origin: center;
 }
 
 .camera::before {
@@ -144,7 +146,7 @@
 }
 
 .camera:hover::before {
-    animation: shutterround 2s infinite alternate ease-in-out;
+    animation: camera-move 3s infinite alternate, shutterround 2s infinite alternate ease-in-out;
 }
 
 .camera::after {
@@ -202,6 +204,33 @@
     transform: scale(0.9);
 }
 
+@keyframes camera-move {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    1.78571% {
+        transform: translate(5px, 0) rotate(10deg);
+    }
+    3.57143% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    5.35714% {
+        transform: translate(5px, 0) rotate(10deg);
+    }
+    7.14286% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    8.92857% {
+        transform: translate(5px, 0) rotate(10deg);
+    }
+    10.71429% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
 @keyframes camera {
     0% {
         height: 5px;
@@ -257,14 +286,14 @@
     }
     .camera {
         margin: 20px auto;
-        height: 30px;
-        width: 40px;
+        height: 35px;
+        width: 50px;
         top: 120px;
     }
     .camera::after {
         position: absolute;
         right: 5px;
-        bottom: 32px;
+        bottom: 36px;
         display: block;
         content: '';
         height: 12.5%;
