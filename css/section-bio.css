@@ -156,6 +156,7 @@
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         letter-spacing: 3px;
         color: var(--var-grey);
+        /* color: rgba(255, 255, 255, 0.4); */
         text-shadow: 2px 2px 2px rgba(57, 57, 57, 0.296), 1px 1px 5px rgba(0, 0, 0, 0.721);
     }
     
@@ -165,6 +166,7 @@
     
     .bio-short-description h2 span {
         color: var(--var-aqua);
+        /* color: #ffff; */
     }
     
     .bio-description p {
@@ -178,7 +180,8 @@
         background-clip: text;
         -webkit-background-clip: text;
         letter-spacing: 3px;
-        color: #707377;
+        /* color: #707377; */
+        color: rgb(173, 172, 172);
         /* color: var(--var-aqua); */
         text-shadow: 3px 3px 2px rgb(44, 43, 43), 3px 2px 3px rgba(0, 0, 0, 0.721);
     }
