@@ -11,13 +11,14 @@ lower_hemi.style.transform = 'none';
 
 document.documentElement.style.setProperty('--shutter-bg', 'transparent');
 camera_button.addEventListener('click', function() {
-
+    document.querySelector('.camera').style.animation = 'camera-move 3s infinite alternate';
     hemisphere.style.transition = 'transform 1s ease-in-out';
     lower_hemi.style.transition = 'transform 1s ease-in-out';
     text_slide.style.transition = 'transform .5s ease-in-out';;
     if (document.documentElement.style.getPropertyValue('--shutter-bg') === 'transparent') {
         document.documentElement.style.setProperty('--animation', 'camera 1s alternate ease-in-out')
         document.documentElement.style.setProperty('--shutter-bg', 'url(../img/shutter.png) no-repeat center center fixed')
+        document.querySelector('.camera').style.animation = 'none';
         upper_hemi.style.transform = 'translateY(-500px)';
         lower_hemi.style.transform = 'translateY(500px)';
         setTimeout(function() {
