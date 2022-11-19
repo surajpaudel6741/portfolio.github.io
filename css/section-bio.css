@@ -105,8 +105,7 @@
     .bio-short-description h2 {
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         letter-spacing: 3px;
-        color: var(--var-grey);
-        /* color: rgba(255, 255, 255, 0.4); */
+        color: rgb(87, 87, 87);
         text-shadow: 2px 2px 2px rgba(57, 57, 57, 0.296), 1px 1px 5px rgba(0, 0, 0, 0.721);
     }
     
