@@ -1,0 +1,111 @@
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.sec-3 {
+    margin-top: 50px;
+}
+
+.projects-showcase h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 10px;
+    font-weight: 900;
+    font-size: 34px;
+    padding: 10px 20px;
+    color: var(--var-white);
+}
+
+.projects-showcase h1::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: var(--var-black);
+    border: 1px solid var(--var-black);
+    transform: skew(20deg);
+    left: 0;
+    top: 0px;
+    z-index: -1;
+}
+
+.projects-showcase h1::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border: 2px solid var(--var-aqua);
+    transform: skew(20deg);
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.project {
+    height: 350px;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #2425252a;
+    text-align: justify;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.604);
+    margin: 30px;
+    font-family: monospace;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+}
+
+.project p {
+    padding-left: 20px;
+    padding-right: 20px;
+    word-spacing: 0.25%;
+}
+
+.project_icon {
+    height: 50%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 20px;
+}
+
+.project::after {
+    content: '';
+    height: 50%;
+    width: 100%;
+    background-color: var(--var-aqua);
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    top: 0px;
+    bottom: none;
+    transition: all 1s ease-in-out;
+}
+
+.project:hover {
+    min-height: 350px;
+}
+
+.project:hover::after {
+    background-color: var(--var-black);
+    top: 100%;
+    transform: translateY(-100%);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

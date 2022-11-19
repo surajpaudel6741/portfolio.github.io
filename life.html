@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj's Life</title>
+    <link rel="stylesheet" href="css/navcss.css">
+    <link rel="stylesheet" href="css/life.css">
+</head>
+<style>
+    html {
+        overflow-x: hidden;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        color: white;
+    }
+    
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: #393E46;
+        transition: filter 10s ease-in-out;
+    }
+    
+    .preload {
+        transition: all none;
+    }
+    
+     :root {
+        --var-aqua: #00ADB5;
+        --var-white: #ffffff;
+        --var-grey: #393E46;
+        --var-black: #222831;
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="navi">
+            <div class="leftnav"></div>
+
+            <div class="mid-nav">
+                <ul class="navbar">
+                    <li class="nav-elements"><a href="index.html">Me</a></li>
+                    <li class="nav-elements"><a href="Gallery.html">Gallery</a></li>
+                    <li class="nav-elements"><a href="Projects.html">Projects</a></li>
+                    <li class="active nav-elements"><a href="life.html">Life</a></li>
+                    <li class="small-nav" id="mobile-nav-button" onclick="navopen()"><span class="nav-line nav-cross1"></span>
+                        <span class="nav-line nav-cross2"></span>
+                        <span class="nav-line nav-cross3"></span></li>
+                </ul>
+            </div>
+            <div class="rightnav"></div>
+        </div>
+
+        <div class="nav-mobile" id="mobile-nav">
+            <span class="drop-down-triangle"></span>
+
+            <div class="nav-mobile-box" id="mobile-nav-content">
+                <span class="navigation-dropdown">
+                <a href="index.html">Me</a> 
+            </span>
+                <span class="navigation-dropdown">
+               <a href=""> Gallery</a>
+            </span>
+                <span class="navigation-dropdown">
+               <a href="">Projects</a> 
+            </span>
+                <span class="navigation-dropdown">
+               <a href=""> Life</a>
+            </span>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- <div class="for_scroll"></div> -->
+    <script type="text/javascript " src="javascript/navscript.js "></script>
+    <script type="text/javascript " src="javascript/window.js "></script>
+
+</body>
+
+</html>

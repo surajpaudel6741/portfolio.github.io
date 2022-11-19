@@ -24,8 +24,8 @@ window.addEventListener('resize', function() {
 window.addEventListener('scroll', function() {
     const scroll = this.window.scrollY;
     const lineWidth = 0.15 * scroll;
-    // const marginLine = 0.029 * scroll * (-1);
-    // const windowWidth = window.width - 100;
+
+
     this.document.documentElement.style.setProperty('--title-line', lineWidth.toString() + '%')
 
 

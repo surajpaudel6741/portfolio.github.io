@@ -95,56 +95,6 @@
         box-shadow: inset 11px 11px 25px 3px rgba(0, 0, 0, 0.51);
     }
     
-    .bio-description::after {
-        content: 'About me';
-        font-size: 2em;
-        box-sizing: border-box;
-        padding-top: 25%;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        letter-spacing: 5px;
-        color: var(--var-grey);
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.721);
-        text-align: center;
-        display: inline-block;
-        position: absolute;
-        background-color: var(--var-grey);
-        height: 100%;
-        width: 100%;
-        border-radius: 20px;
-        -webkit-box-shadow: inset -7px -10px 35px -7px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: inset -7px -10px 35px -7px rgba(0, 0, 0, 0.75);
-        box-shadow: inset -7px -10px 35px -7px rgba(0, 0, 0, 0.75);
-        transform-origin: top left;
-        animation: var(--var-about-box, box-movement 2s infinite alternate);
-        ;
-    }
-    
-    .bio-description::before {
-        content: '';
-        font-size: 2em;
-        box-sizing: border-box;
-        display: inline-block;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        border-radius: 20px;
-        -webkit-box-shadow: -2px -2px 31px -1px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: -2px -2px 31px -1px rgba(0, 0, 0, 0.75);
-        box-shadow: -2px -2px 31px -1px rgba(0, 0, 0, 0.75);
-        transform-origin: top left;
-        animation: var(--var-about-box, box-movement 2s infinite alternate);
-    }
-    
-    .bio-description:hover::before {
-        --var-about-box: box-transition 1s ease-out forwards;
-        transition: transform 1s ease-in;
-    }
-    
-    .bio-description:hover::after {
-        --var-about-box: box-transition 1s ease-out forwards;
-        transition: transform 1s ease-in;
-    }
-    
     .bio-short-description {
         position: absolute;
         line-height: 60px;

@@ -8,6 +8,10 @@ nav {
     z-index: 1000;
 }
 
+a {
+    text-decoration: none;
+}
+
 .navi {
     top: 0;
     width: 100%;
