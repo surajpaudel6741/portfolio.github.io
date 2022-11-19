@@ -1,0 +1,37 @@
+footer {
+    background: #242525b6;
+    border-top: 1px solid var(--var-black);
+    line-height: 30px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    ;
+}
+
+.iconsB {
+    margin: 20px 15px;
+}
+
+.iconB {
+    font-size: 32px;
+    transition: transform 0.5s;
+}
+
+.iconsB:hover .iconB {
+    transform: translateY(-10px);
+}
+
+footer p {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 450px) {
+    .iconB {
+        font-size: 24px;
+    }
+}
