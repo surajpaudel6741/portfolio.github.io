@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://kit.fontawesome.com/b7f754df74.js" crossorigin="anonymous"></script>
+    <script defer src="javascript/loadinganimate.js"></script>
 </head>
 <style>
     html {
@@ -49,6 +50,23 @@
         --var-grey: #393E46;
         --var-black: #222831;
     }
+    
+    .sec {
+        transform: translateY(150px);
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    @media (prefers-reduced-motion) {
+        .sec {
+            transition: none;
+        }
+    }
 </style>
 
 <body class="preload">
@@ -61,7 +79,7 @@
                     <li class="active nav-elements"><a href="index.html">Me</a></li>
                     <li class="nav-elements"><a href="Gallery.html">Gallery</a></li>
                     <li class="nav-elements"><a href="Projects.html">Projects</a></li>
-                    <li class="nav-elements"><a href="life.html">Life</a></li>
+
                     <li class="small-nav" id="mobile-nav-button" onclick="navopen()"><span class="nav-line nav-cross1"></span>
                         <span class="nav-line nav-cross2"></span>
                         <span class="nav-line nav-cross3"></span></li>
@@ -82,10 +100,7 @@
             </span>
                 <span class="navigation-dropdown">
                <a href="">Projects</a> 
-            </span>
-                <span class="navigation-dropdown">
-               <a href=""> Life</a>
-            </span>
+            
             </div>
         </div>
     </nav>
@@ -106,7 +121,7 @@
             </ul>
 
             <ul class="social-sites right-social-sites">
-                <li class="icons discord"><a href="https://discord.gg/AaHmZRvE4J" class="social-link"><i class="icon fa-brands fa-discord"></i></a></li>
+                <li class="icons github"><a href="https://github.com/surajpaudel6741" class="social-link"><i class="icon fa-brands fa-github"></i></i></a></li>
                 <li class="icons linkedin"><a href="https://www.linkedin.com/in/suraj-paudel-056368224/" class="social-link"><i class="icon fa-brands fa-linkedin"></i></a></li>
                 <li class="icons mail"><a href="mailto:surajpaudel696741@gmail.com" class="social-link"><i class="icon fa-solid fa-envelope"></i></a></li>
             </ul>
@@ -116,131 +131,130 @@
             <div class="picture-text-holder">
                 <div class="text-side">
                     <div class="hemisphere hemi-up"><span class="profile-text pText-up">Hello!</span></div>
-                    <div class="hemisphere hemi-down"><span class="profile-text pText-down">Hello!</span></div>
-                </div>
-                <div class="picture-side"></div>
-            </div>
-            <div class="camera-setup">
-                <span class="camera pic-show"></span>
-            </div>
+            <div class="hemisphere hemi-down"><span class="profile-text pText-down">Hello!</span></div>
+        </div>
+        <div class="picture-side"></div>
+        </div>
+        <div class="camera-setup">
+            <span class="camera pic-show"></span>
+        </div>
 
         </div>
-    </section>
-    <!--============================================ Hello title================  -->
-    <div class="bio">
-        <h1 class="bio-title"> &nbsp;&nbsp;&nbsp;&nbsp;I <span id="a-rotation">a</span>m <span>S</span>ur<span id="a-rotation">a</span>j<span>&#128075;</span></h1>
-    </div>
-    <section class="section sec-2">
-        <!--=======================================Bio ================================= -->
-        <div class="bio-describe">
-            <div class="bio-description">
-                <div class="bio-short-description">
-                    <h2><span></span><span>F</span>rontend - Web Developer</h2>
-
-                    <h2><span></span><span>C</span>omputer Engineer<span style="color: rgb(176, 176, 176);font-family: 'Nixie One', cursive; font-size: 8px;letter-spacing:1px;text-shadow: none;">(pursuing)</span>
-                    </h2>
-
-                </div>
-                <p>
-                    He is a Proficient front-end web developer focused on responsive and unique design. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore corporis est ab qui possimus reprehenderit. Iure tempora libero nam porro nulla voluptatum consequatur,
-                    dicta laudantium, laborum earum quaerat aliquid! Neque!
-                </p>
-            </div>
+        </section>
+        <!--============================================ Hello title================  -->
+        <div class="bio">
+            <h1 class="bio-title"> &nbsp;&nbsp;&nbsp;&nbsp;I <span id="a-rotation">a</span>m <span>S</span>ur<span id="a-rotation">a</span>j<span>&#128075;</span></h1>
         </div>
-    </section>
+        <section class="section sec-2 sec">
+            <!--=======================================Bio ================================= -->
+            <div class="bio-describe">
+                <div class="bio-description">
+                    <div class="bio-short-description">
+                        <h2><span></span><span>F</span>rontend - Web Developer</h2>
 
-    <section class="section sec-3">
-        <div class="projects-showcase">
-            <h1>Projects</h1>
-            <div class="projects">
-                <div class="project project1">
-                    <div class="project_icon"> <img src="img/git.png" height="100px" width="100px"></div>
-                    <p>Haven't done something great yet. So visit my <a href="https://github.com/surajpaudel6741" style="text-decoration: underline;">GITHUB</a> profile to see my small projects.
+                        <h2><span></span><span>C</span>omputer Engineer<span style="color: rgb(176, 176, 176);font-family: 'Nixie One', cursive; font-size: 8px;letter-spacing:1px;text-shadow: none;">(pursuing)</span>
+                        </h2>
 
+                    </div>
+                    <p>
+                        He is a Proficient front-end web developer focused on responsive and unique design. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore corporis est ab qui possimus reprehenderit. Iure tempora libero nam porro nulla voluptatum consequatur,
+                        dicta laudantium, laborum earum quaerat aliquid! Neque!
                     </p>
                 </div>
-                <div class="project project2">
-                    <div class="project_icon"> <img src="img/1480.gif"></div>
-                    <p>Comming soon...</p>
-                </div>
-                <div class="project project3">
-                    <div class="project_icon"> <img src="img/1480.gif"></div>
-                    <p>Comming soon...</p>
-                </div>
-                <div class="project project4">
-                    <div class="project_icon"> <img src="img/1480.gif"></div>
-                    <p>Comming soon...</p>
-                </div>
-
             </div>
-        </div>
-    </section>
-    <section class="section sec-4">
-        <div class="scene">
-            <div class="parent">
-                <div class="face front">
-                    <span> <img src="img/html.png"> </span>
-                    <span><img src="img/CSS.png" alt=""></span>
-                    <span><img src="img/pspng.png" alt=""></span>
-                    <span><img src="img/java.png" alt=""></span>
-                </div>
-                <div class="face back">
-                    <span> <img src="img/animate.png"> </span>
-                    <span><img src="img/React-icon.svg.png" alt=""></span>
-                </div>
-                <div class="face right">
-                    <span> <img src="img/illustrator.png"> </span>
-                    <span><img src="img/js.png" alt=""></span>
-                    <span><img src="img/blender.png" alt=""></span>
-                </div>
-                <div class="face left">
+        </section>
 
+        <section class="section sec-3 sec">
+            <div class="projects-showcase">
+                <h1>Projects</h1>
+                <div class="projects">
+                    <div class="project project1">
+                        <div class="project_icon"> <img src="img/git.png" height="100px" width="100px"></div>
+                        <p>Haven't done something great yet. So visit my <a href="https://github.com/surajpaudel6741" style="text-decoration: underline;">GITHUB</a> profile to see my small projects.
 
-                </div>
-                <div class="face top"></div>
-                <div class="face bottom"></div>
-            </div>
-        </div>
-        <div class="skills-bio">
-            <div class="skills-info">
-                <div>
-                    <p>Good Skills.</p>
-                    <p>Intermediate skils.</p>
-                    <p>Basic Skills.</p>
+                        </p>
+                    </div>
+                    <div class="project project2">
+                        <div class="project_icon"> <img src="img/1480.gif"></div>
+                        <p>Comming soon...</p>
+                    </div>
+                    <div class="project project3">
+                        <div class="project_icon"> <img src="img/1480.gif"></div>
+                        <p>Comming soon...</p>
+                    </div>
+                    <div class="project project4">
+                        <div class="project_icon"> <img src="img/1480.gif"></div>
+                        <p>Comming soon...</p>
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </section>
-    <footer>
-        <ul>
-            <li class="iconsB facebook"><a href="https://www.facebook.com/0surajpaudel0/" class="social-link"><i class="iconB fa-brands fa-facebook"></a></i>
-            </li>
-            <li class="iconsB instagram"><a href="https://www.instagram.com/_suraj_paudel_/" class="social-link"><i class="iconB fa-brands fa-instagram"></a></i>
-            </li>
-            <li class="iconsB twitter"><a href="https://twitter.com/_suraj_paudel_" class="social-link"><i class="iconB fa-brands fa-twitter"></a></i>
-            </li>
-            <li class="iconsB discord"><a href="https://discord.gg/AaHmZRvE4J" class="social-link"><i class="iconB fa-brands fa-discord"></i></a>
-            </li>
-            <li class="iconsB linkedin"><a href="https://www.linkedin.com/in/suraj-paudel-056368224/" class="social-link"><i class="iconB fa-brands fa-linkedin"></i></a>
-            </li>
-            <li class="iconsB mail"><a href="mailto:surajpaudel696741@gmail.com" class="social-link"><i class="iconB fa-solid fa-envelope"></i></a>
-            </li>
-        </ul>
-        <p>CREATED WITH ❤️ BY SURAJ PAUDEL.</p>
-        <p>Ⓒ 2022 COPYRIGHT: SURAJ PAUDEL</p>
+        </section>
+        <section class="section sec-4 sec">
+            <div class="scene">
+                <div class="parent">
+                    <div class="face front">
+                        <span> <img src="img/html.png"> </span>
+                        <span><img src="img/CSS.png" alt=""></span>
+                        <span><img src="img/pspng.png" alt=""></span>
+                        <span><img src="img/java.png" alt=""></span>
+                    </div>
+                    <div class="face back">
+                        <span> <img src="img/animate.png"> </span>
+                        <span><img src="img/React-icon.svg.png" alt=""></span>
+                    </div>
+                    <div class="face right">
+                        <span> <img src="img/illustrator.png"> </span>
+                        <span><img src="img/js.png" alt=""></span>
+                        <span><img src="img/blender.png" alt=""></span>
+                    </div>
+                    <div class="face left">
 
-    </footer>
-    <!--========================================SCRIPTS===========================================-->
-    <script src=" javascript/particles.js "></script>
-    <script src="javascript/app.js "></script>
-    <script type="text/javascript " src="https://code.jquery.com/jquery-1.7.1.min.js ">
-        window.load(function() {
-            $("body ").removeClass("preload ");
-        });
-    </script>
-    <script type="text/javascript " src="javascript/navscript.js "></script>
-    <script type="text/javascript " src="javascript/window.js "></script>
-    <script type="text/javascript " src="javascript/intro.js "></script>
+
+                    </div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                </div>
+            </div>
+            <div class="skills-bio">
+                <div class="skills-info">
+                    <div>
+                        <p>Mastered Skills.</p>
+                        <p>Intermediate Skils.</p>
+                        <p>Basic Skills.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <ul>
+                <li class="iconsB facebook"><a href="https://www.facebook.com/0surajpaudel0/" class="social-link"><i class="iconB fa-brands fa-facebook"></a></i>
+                </li>
+                <li class="iconsB instagram"><a href="https://www.instagram.com/_suraj_paudel_/" class="social-link"><i class="iconB fa-brands fa-instagram"></a></i>
+                </li>
+                <li class="iconsB twitter"><a href="https://twitter.com/_suraj_paudel_" class="social-link"><i class="iconB fa-brands fa-twitter"></a></i>
+                </li>
+                <li class="iconsB github"><a href="https://github.com/surajpaudel6741" class="social-link"><i class="iconB fa-brands fa-github"></i></i></a></li>
+                <li class="iconsB linkedin"><a href="https://www.linkedin.com/in/suraj-paudel-056368224/" class="social-link"><i class="iconB fa-brands fa-linkedin"></i></a>
+                </li>
+                <li class="iconsB mail"><a href="mailto:surajpaudel696741@gmail.com" class="social-link"><i class="iconB fa-solid fa-envelope"></i></a>
+                </li>
+            </ul>
+            <p>CREATED BY SURAJ PAUDEL.</p>
+            <p>Ⓒ 2022 COPYRIGHT: SURAJ PAUDEL</p>
+
+        </footer>
+        <!--========================================SCRIPTS===========================================-->
+        <script src=" javascript/particles.js "></script>
+        <script src="javascript/app.js "></script>
+        <script type="text/javascript " src="https://code.jquery.com/jquery-1.7.1.min.js ">
+            window.load(function() {
+                $("body ").removeClass("preload ");
+            });
+        </script>
+        <script type="text/javascript " src="javascript/navscript.js "></script>
+        <script type="text/javascript " src="javascript/window.js "></script>
+        <script type="text/javascript " src="javascript/intro.js "></script>
 </body>
 
 </html>

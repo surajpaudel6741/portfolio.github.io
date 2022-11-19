@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="css/navcss.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/section-projects.css">
-    <link rel="stylesheet" href="css/section-intro.css">
-    <link rel="stylesheet" href="css/section-bio.css">
-    <link rel="stylesheet" href="css/section-skills.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
@@ -18,15 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://kit.fontawesome.com/b7f754df74.js" crossorigin="anonymous"></script>
-    <script defer src="javascript/instaloadanimate.js">
-    </script>
-    <title>Document</title>
-
 </head>
-
 <style>
     html {
-        overflow-x: hidden ! important;
+        overflow-x: hidden;
     }
     
     * {
@@ -40,6 +33,7 @@
         overflow-y: auto;
         background-color: #393E46;
         transition: filter 10s ease-in-out;
+        height: 100%;
     }
     
     .preload {
@@ -53,21 +47,18 @@
         --var-black: #222831;
     }
     
-    #instafeed-container {
-        margin-top: 50px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        position: relative;
+    .project {
+        margin: 120px 0;
+        text-align: center;
+        /* border: 5px solid black; */
     }
     
-    #instafeed-container img {
-        margin: 50px;
-        border: 1px solid var(--var-aqua);
-        border-radius: 10px;
-        height: 400px;
-        width: 450px;
-        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.714);
+    .project p {
+        padding: 100px 100px;
+        font-size: 34px;
+        font-family: monospace;
+        font-weight: 700;
+        line-height: 60px;
     }
 </style>
 
@@ -78,9 +69,9 @@
 
             <div class="mid-nav">
                 <ul class="navbar">
-                    <li class=" nav-elements"><a href="index.html">Me</a></li>
-                    <li class="active nav-elements"><a href="Gallery.html">Gallery</a></li>
-                    <li class="nav-elements"><a href="Projects.html">Projects</a></li>
+                    <li class="nav-elements"><a href="index.html">Me</a></li>
+                    <li class="nav-elements"><a href="Gallery.html">Gallery</a></li>
+                    <li class="active nav-elements"><a href="Projects.html">Projects</a></li>
 
                     <li class="small-nav" id="mobile-nav-button" onclick="navopen()"><span class="nav-line nav-cross1"></span>
                         <span class="nav-line nav-cross2"></span>
@@ -95,24 +86,22 @@
 
             <div class="nav-mobile-box" id="mobile-nav-content">
                 <span class="navigation-dropdown">
-                <a href="">Me</a> 
+                <a href="index.html">Me</a> 
             </span>
                 <span class="navigation-dropdown">
-               <a href=""> Gallery</a>
+               <a href="gallery.html"> Gallery</a>
             </span>
                 <span class="navigation-dropdown">
-               <a href="">Projects</a> 
+               <a href="Projects.html">Projects</a> 
             </span>
-
 
             </div>
         </div>
     </nav>
-
-    <!-- <h1 style="text-align: center">Show Instagram Feed on your Website</h1> -->
-    <div id="instafeed-container"></div>
-
-
+    <div class="project">
+        <p>Projects are yet to be done. For small projects, you can visit my <a href="https://github.com/surajpaudel6741" style="text-decoration:underline ;">Github</a> profile. <br><br>Thank you!
+        </p>
+    </div>
     <footer>
         <ul>
             <li class="iconsB facebook"><a href="https://www.facebook.com/0surajpaudel0/" class="social-link"><i class="iconB fa-brands fa-facebook"></a></i>
@@ -131,16 +120,6 @@
         <p>Ⓒ 2022 COPYRIGHT: SURAJ PAUDEL</p>
 
     </footer>
-    <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
-    <script type="text/javascript">
-        var userFeed = new Instafeed({
-            get: 'user',
-            target: "instafeed-container",
-            resolution: 'low_resolution',
-            accessToken: 'IGQVJXeUt4WWJ3Qm9FZAUpDRUd6V2NnZA0JfanhmRWFMclZALTllZAZA092N2FSY3RYRUFUQzRDcGJYYzdFS0xsVEJkSTJyaDhTMlJxUXl1bE9Edk0xam9sWExjU3duQzhyOF80Q2MwMS1kT2U0LXFpNmVsbgZDZD'
-        });
-        userFeed.run();
-    </script>
     <script type="text/javascript " src="javascript/navscript.js "></script>
     <script type="text/javascript " src="javascript/window.js "></script>
 </body>
